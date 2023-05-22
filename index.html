@@ -218,12 +218,12 @@
 会出现这种问题，很大原因就是集群机器默认的读入和打印的格式和我们数据的输入、想要的输出格式不一样
 </code></pre>
 <h1 id="怎么解决？"><a href="#怎么解决？" class="headerlink" title="怎么解决？"></a>怎么解决？</h1><ul>
-<li>python2<br>  如果是<strong>python2</strong>，可以使用reload</li>
+<li>python2<br>  如果是python2，可以使用reload</li>
 </ul>
 <pre><code class="python">sys.setdefaultencoding(&#39;utf8&#39;)
 </code></pre>
 <ul>
-<li>python3<br>  如果是<strong>python3</strong>，没有sys.setdefaultencoding，则使用：</li>
+<li>python3<br>  如果是python3，没有sys.setdefaultencoding，则使用：</li>
 </ul>
 <pre><code class="python">sys.stdin = io.TextIOWrapper(sys.stdin.buffer, encoding=&#39;utf-8&#39;)
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding=&#39;utf-8&#39;)
@@ -244,7 +244,7 @@ sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding=&#39;utf-8&#39;)
         
         <span class="tag">
             
-            <a href="/tags/debug" style=color:#00bcd4>
+            <a href="/tags/debug" style=color:#ffa2c4>
                 debug
             </a>
         </span>
@@ -304,7 +304,7 @@ sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding=&#39;utf-8&#39;)
         
         <span class="tag">
             
-            <a href="/tags/纯属秀恩爱" style=color:#00bcd4>
+            <a href="/tags/纯属秀恩爱" style=color:#ff7d73>
                 纯属秀恩爱
             </a>
         </span>
