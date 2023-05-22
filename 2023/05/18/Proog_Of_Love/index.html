@@ -1,7 +1,14 @@
 
 <!DOCTYPE html>
 <html lang="en ">
-
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
+<canvas id="background" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1"></canvas>
+<script src="/js/background.min.js"></script>
+<div id="cursor"></div>
+<link rel="stylesheet" href="/css/cursor.min.css">
+<script src="/js/cursor.min.js"></script>   
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,15 +26,6 @@
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
-    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-    <script type="text/javascript" src="/js/fireworks.js"></script>
-    <canvas id="background" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1"></canvas>
-    <script src="/js/background.min.js"></script>
-    <div id="cursor"></div>
-    <link rel="stylesheet" href="/css/cursor.min.css">
-    <script src="/js/cursor.min.js"></script>   
-
     <div id="loading"
         style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
         <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
@@ -191,7 +189,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/纯属秀恩爱" style=color:#ff7d73>
+                <a href="/tags/纯属秀恩爱" style=color:#00bcd4>
                     纯属秀恩爱
                 </a>
             </span>
