@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Proof of Love</title>
-    <url>/2023/05/18/Proog_Of_Love/</url>
-    <content><![CDATA[<p>自2020.10.14起，修修爱贞贞，贞贞爱修修。<br>期限：+∞</p>
-]]></content>
-      <categories>
-        <category>个人证书</category>
-      </categories>
-      <tags>
-        <tag>纯属秀恩爱</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hadoop Stream 排序reduce</title>
     <url>/2023/05/23/hadoopSteamSort/</url>
     <content><![CDATA[<h1 id="问题定义"><a href="#问题定义" class="headerlink" title="问题定义"></a>问题定义</h1><pre><code>已知一天有N个用户，每个用户每天有多条数据，且出现在不同的timestamp。如何处理，使得数据按照用户粒度进行聚合
@@ -154,6 +142,18 @@ print(cur_oaid+&quot;\t&quot;+str(cur_q_dict_list)+&quot;\t&quot;+str(cur_t_dict
       </categories>
       <tags>
         <tag>MapReduce</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Proof of Love</title>
+    <url>/2023/05/18/Proog_Of_Love/</url>
+    <content><![CDATA[<p>自2020.10.14起，修修爱贞贞，贞贞爱修修。<br>期限：+∞</p>
+]]></content>
+      <categories>
+        <category>个人证书</category>
+      </categories>
+      <tags>
+        <tag>纯属秀恩爱</tag>
       </tags>
   </entry>
   <entry>
