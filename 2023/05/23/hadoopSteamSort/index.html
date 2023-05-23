@@ -182,7 +182,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/MapReduce" style=color:#ff7d73>
+                <a href="/tags/MapReduce" style=color:#1bccbc>
                     MapReduce
                 </a>
             </span>
@@ -194,6 +194,7 @@
     <div class="content" v-pre>
         <h1 id="问题定义"><a href="#问题定义" class="headerlink" title="问题定义"></a>问题定义</h1><pre><code>已知一天有N个用户，每个用户每天有多条数据，且出现在不同的timestamp。如何处理，使得数据按照用户粒度进行聚合
 </code></pre>
+<span id="more"></span>
 <h1 id="如何解决"><a href="#如何解决" class="headerlink" title="如何解决"></a>如何解决</h1><pre><code>只要在计算的时候加入四行参数即可：
 </code></pre>
 <pre><code class="hadoop">    -jobconf stream.num.map.output.key.fields=4 \
@@ -201,7 +202,6 @@
     -jobconf mapred.output.key.comparator.class=org.apache.hadoop.mapred.lib.KeyFieldBasedComparator \
     -jobconf mapred.text.key.comparator.options=&quot;-k2,2 -k1,1nr -k4,4 -k3,3nr&quot; \
 </code></pre>
-<span id="more"></span>
 <pre><code>一个完整的demo设置如下：
 </code></pre>
 <pre><code class="hadoop">$&#123;HADOOP_BIN&#125; streaming  -conf $&#123;XML_CONF&#125; \
