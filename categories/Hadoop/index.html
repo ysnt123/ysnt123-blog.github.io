@@ -63,10 +63,6 @@
         <a href="/">
             <span class="title">统计人贞子</span>
         </a>
-        <div id="site_search">
-            <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control"/>
-            <div id="local-search-result"></div>
-          </div>
         
         <a href="/">
             <span>
@@ -167,6 +163,11 @@
         </div>
         <div class="curtain" v-show="menu_show"></div>
     </div>
+    
+    <div id="site_search">
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control"/>
+        <div id="local-search-result"></div>
+      </div>
 
 </nav>
 
@@ -180,6 +181,16 @@
         
         
         <span>
+            <a href="/categories/个人证书/" style=background:#879cff>
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                个人证书
+            </a>
+        </span>
+        
+        
+        
+        <span>
             <a href="/categories/Hadoop/" style='background:linear-gradient(to right, #fbc2eb 0%, #bbd4ff 100%)'>
                 <span class="icon">
                     <a-icon type="book" theme="filled" /></span>
@@ -188,18 +199,47 @@
         </span>
         
         
-        
-        <span>
-            <a href="/categories/个人证书/" style=background:#ff7d73>
-                <span class="icon">
-                    <a-icon type="book" theme="filled" /></span>
-                个人证书
-            </a>
-        </span>
-        
-        
     </div>
     <div id="archives">
+        
+        <a-timeline>
+            <a-timeline-item timestamp="2023/5/23" placement="top" color="#a5c2f5">
+                <a-card hoverable>
+                    <div class="item-time">2023/5/23</div>
+                    <a href="/2023/05/23/hadoopSteamSort/">
+                        <h3>Hadoop Stream 排序reduce</h3>
+                    </a>
+                    <div class="info">
+                        
+                        <span class="category">
+                            <a href="/categories/Hadoop">
+                                <span class="icon">
+                                    <a-icon type="book" theme="filled" />
+                                </span>
+                                Hadoop
+                            </a>
+                        </span>
+                        
+
+                        
+                        <span class="tags">
+                            <span class="icon">
+                                <a-icon type="tags" />
+                            </span>
+                            
+                            <span class="tag">
+                                
+                                <a href="/tags/MapReduce" style=color:#879cff>
+                                    MapReduce
+                                </a>
+                            </span>
+                            
+                        </span>
+                        
+                    </div>
+                </a-card>
+            </a-timeline-item>
+        </a-timeline>
         
         <a-timeline>
             <a-timeline-item timestamp="2023/5/22" placement="top" color="#a5c2f5">
@@ -230,45 +270,6 @@
                                 
                                 <a href="/tags/debug" style=color:#ffa2c4>
                                     debug
-                                </a>
-                            </span>
-                            
-                        </span>
-                        
-                    </div>
-                </a-card>
-            </a-timeline-item>
-        </a-timeline>
-        
-        <a-timeline>
-            <a-timeline-item timestamp="2023/5/23" placement="top" color="#a5c2f5">
-                <a-card hoverable>
-                    <div class="item-time">2023/5/23</div>
-                    <a href="/2023/05/23/hadoopSteamSort/">
-                        <h3>Hadoop Stream 排序reduce</h3>
-                    </a>
-                    <div class="info">
-                        
-                        <span class="category">
-                            <a href="/categories/Hadoop">
-                                <span class="icon">
-                                    <a-icon type="book" theme="filled" />
-                                </span>
-                                Hadoop
-                            </a>
-                        </span>
-                        
-
-                        
-                        <span class="tags">
-                            <span class="icon">
-                                <a-icon type="tags" />
-                            </span>
-                            
-                            <span class="tag">
-                                
-                                <a href="/tags/MapReduce" style=color:#ffa2c4>
-                                    MapReduce
                                 </a>
                             </span>
                             
