@@ -70,6 +70,10 @@
             </span>
             <span>home</span>
         </a>
+        <div id="site_search">
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control"/>
+            <div id="local-search-result"></div>
+          </div>
 
         
         <a href="/about">
@@ -78,6 +82,10 @@
             </span>
             <span>about</span>
         </a>
+        <div id="site_search">
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control"/>
+            <div id="local-search-result"></div>
+          </div>
 
         
         <a href="/archives">
@@ -86,6 +94,10 @@
             </span>
             <span>archives</span>
         </a>
+        <div id="site_search">
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control"/>
+            <div id="local-search-result"></div>
+          </div>
 
         
         <a href="/categories">
@@ -94,6 +106,10 @@
             </span>
             <span>categories</span>
         </a>
+        <div id="site_search">
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control"/>
+            <div id="local-search-result"></div>
+          </div>
 
         
         <a href="/tags">
@@ -102,12 +118,12 @@
             </span>
             <span>tags</span>
         </a>
-
-        
         <div id="site_search">
             <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control"/>
             <div id="local-search-result"></div>
           </div>
+
+        
     </div>
 
     <div :class="'phone-menu ' + menu_show" id="phone-menu">
@@ -202,6 +218,45 @@
     <div id="archives">
         
         <a-timeline>
+            <a-timeline-item timestamp="2023/5/23" placement="top" color="#a5c2f5">
+                <a-card hoverable>
+                    <div class="item-time">2023/5/23</div>
+                    <a href="/2023/05/23/hadoopSteamSort/">
+                        <h3>Hadoop Stream 排序reduce</h3>
+                    </a>
+                    <div class="info">
+                        
+                        <span class="category">
+                            <a href="/categories/Hadoop">
+                                <span class="icon">
+                                    <a-icon type="book" theme="filled" />
+                                </span>
+                                Hadoop
+                            </a>
+                        </span>
+                        
+
+                        
+                        <span class="tags">
+                            <span class="icon">
+                                <a-icon type="tags" />
+                            </span>
+                            
+                            <span class="tag">
+                                
+                                <a href="/tags/MapReduce" style=color:#879cff>
+                                    MapReduce
+                                </a>
+                            </span>
+                            
+                        </span>
+                        
+                    </div>
+                </a-card>
+            </a-timeline-item>
+        </a-timeline>
+        
+        <a-timeline>
             <a-timeline-item timestamp="2023/5/22" placement="top" color="#a5c2f5">
                 <a-card hoverable>
                     <div class="item-time">2023/5/22</div>
@@ -230,45 +285,6 @@
                                 
                                 <a href="/tags/debug" style=color:#1bccbc>
                                     debug
-                                </a>
-                            </span>
-                            
-                        </span>
-                        
-                    </div>
-                </a-card>
-            </a-timeline-item>
-        </a-timeline>
-        
-        <a-timeline>
-            <a-timeline-item timestamp="2023/5/23" placement="top" color="#a5c2f5">
-                <a-card hoverable>
-                    <div class="item-time">2023/5/23</div>
-                    <a href="/2023/05/23/hadoopSteamSort/">
-                        <h3>Hadoop Stream 排序reduce</h3>
-                    </a>
-                    <div class="info">
-                        
-                        <span class="category">
-                            <a href="/categories/Hadoop">
-                                <span class="icon">
-                                    <a-icon type="book" theme="filled" />
-                                </span>
-                                Hadoop
-                            </a>
-                        </span>
-                        
-
-                        
-                        <span class="tags">
-                            <span class="icon">
-                                <a-icon type="tags" />
-                            </span>
-                            
-                            <span class="tag">
-                                
-                                <a href="/tags/MapReduce" style=color:#ffa2c4>
-                                    MapReduce
                                 </a>
                             </span>
                             
