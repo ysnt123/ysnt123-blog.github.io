@@ -36,87 +36,6 @@
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
-    <div class="col-md-8">
-        <div class="markdown-section">
-            <!-- 搜索结果 -->
-            <div id="local-search-result"></div>
-             
-<link rel="stylesheet" href="/css/post-body.css">
-<div class="article">
-    <div>
-        <h1>Hadoop Stream 中文乱码解决 </h1>
-    </div>
-    <div class="info">
-        <span class="date">
-            <span class="icon">
-                <a-icon type="calendar" theme="filled" />
-            </span>
-            2023/5/22
-        </span>
-
-        
-        <span class="category">
-            <a href="/categories/Hadoop">
-                <span class="icon">
-                    <a-icon type="book" theme="filled" />
-                </span>
-                Hadoop
-            </a>
-        </span>
-        
-
-        
-
-        <span class="tags">
-            <span class="icon">
-                <a-icon type="tags" theme="filled" />
-            </span>
-            
-            <span class="tag">
-                
-                <a href="/tags/debug" style=color:#879cff>
-                    debug
-                </a>
-            </span>
-            
-        </span>
-        
-    </div>
-
-    <div class="content" v-pre>
-        <h1 id="问题定义"><a href="#问题定义" class="headerlink" title="问题定义"></a>问题定义</h1><pre><code>在使用hadoop的时候，如果输入有中文，那么经常会遇到一个问题————乱码！
-这里记录一下mapper.py和reducer.py里设置方法。
-</code></pre>
-<span id="more"></span>
-<h1 id="问题出现的原因"><a href="#问题出现的原因" class="headerlink" title="问题出现的原因"></a>问题出现的原因</h1><pre><code>hadoop提交作业，把文件打包到集群上，用集群机器去进行map reduce～
-会出现这种问题，很大原因就是集群机器默认的读入和打印的格式和我们数据的输入、想要的输出格式不一样
-</code></pre>
-<h1 id="怎么解决？"><a href="#怎么解决？" class="headerlink" title="怎么解决？"></a>怎么解决？</h1><ul>
-<li>python2<br>  如果是python2，可以使用reload</li>
-</ul>
-<pre><code class="python">sys.setdefaultencoding(&#39;utf8&#39;)
-</code></pre>
-<ul>
-<li>python3<br>  如果是python3，没有sys.setdefaultencoding，则使用：</li>
-</ul>
-<pre><code class="python">sys.stdin = io.TextIOWrapper(sys.stdin.buffer, encoding=&#39;utf-8&#39;)
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding=&#39;utf-8&#39;)
-sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding=&#39;utf-8&#39;)
-</code></pre>
-<p>完美解决～</p>
-
-    </div>
-
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    <div id="comment">
-        <div id="gitalk-container">
-        </div>
-    </div>
-    
-</div> 
-        </div>
-    </div>    
     
     <div id="loading"
         style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
@@ -288,7 +207,7 @@ sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding=&#39;utf-8&#39;)
             
             <span class="tag">
                 
-                <a href="/tags/debug" style=color:#1bccbc>
+                <a href="/tags/debug" style=color:#ff7d73>
                     debug
                 </a>
             </span>
