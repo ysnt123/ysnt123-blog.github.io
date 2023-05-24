@@ -23,7 +23,7 @@
     <script type="text/javascript">      
         var search_path = "/search.xml";
         if (search_path.length == 0) {
-            search_path = "search.xml";
+            search_path = "./search.xml";
         }
         var path = "/" + search_path;
         searchFunc(path, 'local-search-input', 'local-search-result');
@@ -104,7 +104,10 @@
         </a>
 
         
-
+        <div id="site_search">
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control"/>
+            <div id="local-search-result"></div>
+          </div>
     </div>
 
     <div :class="'phone-menu ' + menu_show" id="phone-menu">

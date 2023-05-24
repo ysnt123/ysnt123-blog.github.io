@@ -23,7 +23,7 @@
     <script type="text/javascript">      
         var search_path = "/search.xml";
         if (search_path.length == 0) {
-            search_path = "search.xml";
+            search_path = "./search.xml";
         }
         var path = "/" + search_path;
         searchFunc(path, 'local-search-input', 'local-search-result');
@@ -104,7 +104,10 @@
         </a>
 
         
-
+        <div id="site_search">
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control"/>
+            <div id="local-search-result"></div>
+          </div>
     </div>
 
     <div :class="'phone-menu ' + menu_show" id="phone-menu">
@@ -248,7 +251,7 @@
         
         <span class="tag">
             
-            <a href="/tags/MapReduce" style=color:#879cff>
+            <a href="/tags/MapReduce" style=color:#1bccbc>
                 MapReduce
             </a>
         </span>
@@ -309,7 +312,7 @@
         
         <span class="tag">
             
-            <a href="/tags/debug" style=color:#ffa2c4>
+            <a href="/tags/debug" style=color:#1bccbc>
                 debug
             </a>
         </span>
@@ -369,7 +372,7 @@
         
         <span class="tag">
             
-            <a href="/tags/纯属秀恩爱" style=color:#ffa2c4>
+            <a href="/tags/纯属秀恩爱" style=color:#00bcd4>
                 纯属秀恩爱
             </a>
         </span>
@@ -466,10 +469,6 @@
             
         </div>
         <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=2024619658&auto=1&height=66"></iframe>
-        <div id="site_search">
-            <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control"/>
-            <div id="local-search-result"></div>
-          </div>
     
     
     </a-card>
