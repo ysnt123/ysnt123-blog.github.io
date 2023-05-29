@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>统计人贞子 || tags</title>
+    <title>统计人贞子 || Hadoop限制每个mapper的输入为单个文件</title>
     <meta name="author" content="严贞婷">
     <meta name="description" content=" ">
     <meta name="keywords" content=" ">
@@ -172,63 +172,75 @@
 
                 <div id="main">
                      
-<div class="categories-tags">
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>Hadoop限制每个mapper的输入为单个文件 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/5/29
+        </span>
+
+        
+        <span class="category">
+            <a href="/categories/Hadoop">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
+                Hadoop
+            </a>
+        </span>
+        
+
+        
+
+        <span class="tags">
+            <span class="icon">
+                <a-icon type="tags" theme="filled" />
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/splittable-file-formats" style=color:#00bcd4>
+                    splittable-file-formats
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+
+    <div class="content" v-pre>
+        <h1 id="问题定义"><a href="#问题定义" class="headerlink" title="问题定义"></a>问题定义</h1><pre><code>已知我们需要把一个模型在多个标签维度进行分布式训练（把每个单机训练--&gt;put到集群，集群每个mapper只对每个文件进行处理！
+</code></pre>
+<span id="more"></span>
+<h1 id="如何解决"><a href="#如何解决" class="headerlink" title="如何解决"></a>如何解决</h1><pre><code>1、打包每个标签类型的数据为gz文件
+</code></pre>
+<pre><code class="bash">gzip 
+</code></pre>
+<pre><code>2、在mapper.py里限定输入
+</code></pre>
+<pre><code class="python">file_path = os.environ[&quot;map_input_file&quot;]
+self.channelName = os.path.basename(os.path.dirname(os.path.dirname(file_path)))
+self.channelID = os.path.basename(os.path.dirname(file_path))
+self.ivkDate =  os.path.basename(os.path.dirname(os.path.dirname(os.path.dirname(file_path))))
+self.channelType=os.path.basename(file_path)[0]
+</code></pre>
+<p>完美解决～</p>
+
+    </div>
+
     
-    <div class="all-s">
-        
-        
-        <span>
-            <a href="/tags/splittable-file-formats/" style=background:#ff7d73>
-                <span class="icon">
-                    <a-icon type="tag" theme="filled" />
-                </span>
-                splittable-file-formats
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/debug/" style=background:#879cff>
-                <span class="icon">
-                    <a-icon type="tag" theme="filled" />
-                </span>
-                debug
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/纯属秀恩爱/" style=background:#ffa2c4>
-                <span class="icon">
-                    <a-icon type="tag" theme="filled" />
-                </span>
-                纯属秀恩爱
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/tags/MapReduce/" style=background:#ff7d73>
-                <span class="icon">
-                    <a-icon type="tag" theme="filled" />
-                </span>
-                MapReduce
-            </a>
-        </span>
-        
-        
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
     </div>
-    <div id="archives">
-        
-    </div>
-    <script>
-        new Vue({
-            el: '#archives'
-        })
-    </script>
+    
 </div>
                      
 <footer id="footer">
@@ -292,6 +304,21 @@
             }
         }
     })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'hexo-theme-particle',      // The repository of store comments,
+        owner: 'korilin',
+        admin: ['korilin'],
+        language: 'en',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
 </script>
 
 
