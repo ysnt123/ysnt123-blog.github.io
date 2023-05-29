@@ -106,6 +106,7 @@
         
     </div>
 
+
     <div :class="'phone-menu ' + menu_show" id="phone-menu">
         <div :class="'title'" @click="menu_show=!menu_show">
             <span style="margin-right: 10px;">
@@ -163,11 +164,7 @@
         </div>
         <div class="curtain" v-show="menu_show"></div>
     </div>
-    
-    <div id="site_search">
-        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control"/>
-        <div id="local-search-result"></div>
-      </div>
+
 
 </nav>
 
@@ -191,7 +188,7 @@
         
         
         <span>
-            <a href="/categories/Hadoop/" style=background:#879cff>
+            <a href="/categories/Hadoop/" style=background:#1bccbc>
                 <span class="icon">
                     <a-icon type="book" theme="filled" /></span>
                 Hadoop
